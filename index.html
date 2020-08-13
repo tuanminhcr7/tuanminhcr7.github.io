@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Website</title>
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+<body onload="renderListStudent()" background="F:\Sublime_text_3\website\image.jpg ">
+	<div class="form-student" style="color: red" style="ba">
+		<h3 style="color: red" align="center">Thông tin sinh viên</h3>
+		<label>Mã sinh viên:</label>
+		<input type="text" id="code" style="background-color: #CCFFFF; outline-color: red; color: black" />
+		<span id="code-error" class="error"></span>
+		<br/>
+
+		<label>Họ và tên:</label>
+		<input type="text" id="fullname" style="background-color: #CCFFFF; outline-color: red; color: black"/>
+		<span id="fullname-error" class="error"></span>
+		<br/>
+
+		<label>Ngày sinh:</label>
+		<input type="text" id="day" style="background-color: #CCFFFF; outline-color: red; color: black">
+		<span id="day-error" class="error"></span>
+		<br/>
+
+		<label>Khóa:</label>
+		<input type="number" id="course" style="background-color: #CCFFFF; outline-color: red; color: black">
+		<span id="course-error" class="error"></span>
+		<br/>
+		<br>
+
+		<label>Khoa:</label>
+		<input type="text" id="faculty" style="background-color: #CCFFFF; outline-color: red; color: black" list="choose-faculty">
+		<datalist id="choose-faculty">
+		    <option value="Công nghệ thông tin"/>
+		    <option value="Ô tô"/>
+		    <option value="Cơ khí"/>
+		    <option value="Du lịch"/>
+		    <option value="Điện"/>
+		</datalist>
+		<span id="faculty-error" class="error"></span>
+		<br/>
+
+		<label>Ngành:</label>
+		<input type="text" id="major" style="background-color: #CCFFFF; outline-color: red; color: black" list="choose-major">
+		<datalist id="choose-major">
+		    <option value="Công nghệ thông tin" label="Khoa CNTT"/>
+		    <option value="Khoa học máy tính" label="Khoa CNTT"/>
+		    <option value="Kĩ thuật phần mềm" label="Khoa CNTT" />
+		    <option value="Hệ thống thông tin" label="Khoa CNTT" />
+		    <option value="Cơ khí"/>
+		    <option value="Du lịch" label="Khoa Du lịch"/>
+		    <option value="Quản trị khách sạn" label="Khoa Du lịch"/>
+		    <option value="Quản trị Du lịch - Lữ hành"label="Khoa Du lịch"/>
+		    <option value="Điện"/>
+		</datalist>
+		<span id="major-error" class="error"></span>
+		<br/>
+
+		<label>Địa chỉ email:</label>
+		<input type="text" id="email"  style="background-color: #CCFFFF; outline-color: red; color: black"/>
+		<span id="email-error" class="error"></span>
+		<br/>
+
+		<label>Số điện thoại:</label>
+		<input type="text" id="phone"  style="background-color: #CCFFFF; outline-color: red; color: black"/>
+		<span id="phone-error" class="error"></span>
+		<br/>
+
+		<label>Địa chỉ:</label>
+		<input type="text" id="address"  style="background-color: #CCFFFF; outline-color: red; color: black"/>
+		<span id="address-error" class="error"></span>
+		<br/>
+
+		<label>Giới tính:</label>
+		<input type="radio" name="gender" id="male" value="1">Nam
+		<input type="radio" name="gender" id="female" value="2">Nữ 
+		<span id="gender-error" class="error"></span>
+		<br/>
+
+		<label>&nbsp;</label>
+		<button onclick="save()" style="color: red">Save</button>
+	</div>
+
+	<div class="list-student" id="list-student">
+			<h3 style="color: lime" align="center">DANH SÁCH SINH VIÊN</h3>
+			<table id="grid-students" width="1500" border="1" cellpadding="0" cellpadding="0" style="color: red" bgcolor="#CCFFFF"></table>	
+	</div>
+
+	<script src='https://cdn.jsdelivr.net/g/lodash@4(lodash.min.js+lodash.fp.min.js)'></script>
+	<script src="./js/student.js"></script>
+</body>
+</html>
